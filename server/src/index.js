@@ -16,15 +16,17 @@ const app=express()
 connectDB()
 
 
-app.get('/',(req,res)=>{
-    res.send("welcome")
-})
+
 app.use(express.json())
 app.use(cookieparser())
 app.use(cors({
     origin:process.env.FRONTEND_URL,
     credentials:true
 }))
+
+app.get('/',(req,res)=>{
+    res.send("welcome")
+})
 
 app.use('/api/user',userRoute)
 app.use('/api/admin',adminRoute)
@@ -38,8 +40,8 @@ const PORT=process.env.PORT || 3000;
 
 if (process.env.NODE_ENV === 'production') {
   module.exports = app; // Exports the app to be used by Vercel
-} else {
-app.listen(PORT,()=>{
+}else {
+ app.listen(PORT,()=>{
     console.log(`server listening to port ${PORT}`)
-})
-}
+ })
+ }
