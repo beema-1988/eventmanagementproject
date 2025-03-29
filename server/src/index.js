@@ -38,10 +38,10 @@ app.use('/api/payment',paymentRoute)
 
 const PORT=process.env.PORT || 3000;
 
-if (process.env.NODE_ENV === 'production') {
-  module.exports = app; // Exports the app to be used by Vercel
-}else {
+// if (process.env.NODE_ENV === 'production') {
+//   module.exports = app; // Exports the app to be used by Vercel
+// }else {
  app.listen(PORT,()=>{
     console.log(`server listening to port ${PORT}`)
  })
- }
+//  }
