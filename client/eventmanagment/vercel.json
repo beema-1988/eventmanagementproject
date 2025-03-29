@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "client/build/**/*", 
+      "src": "client/dist/**/*",
       "use": "@vercel/static"
     }
   ],
@@ -13,6 +13,7 @@
     }
   ]
 }
+
 
 
   
