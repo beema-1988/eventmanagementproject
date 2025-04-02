@@ -25,7 +25,7 @@ app.use(cors({
 }))
 
 app.get('/',(req,res)=>{
-    res.send("welcome to eventmanagement")
+    res.send("welcome")
 })
 
 app.use('/api/user',userRoute)
